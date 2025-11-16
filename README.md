@@ -1,4 +1,4 @@
-# CS 577-07 Data Science Fall 2025
+# Semester Project
 - [Instructions](#instructions)
 - [Authors](#authors)
 - [Data Source](#data-source)
