@@ -46,6 +46,9 @@ Isaac Pacheco
 __________
 "Apartment for Rent Classified." UCI Machine Learning Repository, 2019, https://doi.org/10.24432/C5X623.
 
+"SARPP Real Personal Income, Real PCE, and Regional Price Parities by State." Bureau of Economic Analysis, 2019, 
+https://apps.bea.gov/iTable/?reqid=70&step=1&isuri=1&acrdn=4&_gl=1*5smdkb*_ga*ODc4NzEzMTExLjE3NjMzMzY3Nzg.*_ga_J4698JNNFT*czE3NjMzMzY3NzckbzEkZzEkdDE3NjMzMzczNzkkajU5JGwwJGgw#eyJhcHBpZCI6NzAsInN0ZXBzIjpbMSwyOSwyNSwzMSwyNiwyNywzMF0sImRhdGEiOltbIlRhYmxlSWQiLCIxMTAiXSxbIk1ham9yX0FyZWEiLCIwIl0sWyJTdGF0ZSIsWyIwIl1dLFsiQXJlYSIsWyJYWCJdXSxbIlN0YXRpc3RpYyIsWyItMSJdXSxbIlVuaXRfb2ZfbWVhc3VyZSIsIkxldmVscyJdLFsiWWVhciIsWyIyMDE5Il1dLFsiWWVhckJlZ2luIiwiLTEiXSxbIlllYXJfRW5kIiwiLTEiXV19
+
 # Project Proposal
 __________
 - https://docs.google.com/document/d/12TCXoH94xUPD0hpUMPlKg9uXZ1I1V-cDOle3JsIMFkk/edit?usp=sharing

@@ -1,8 +1,7 @@
 from __future__ import annotations
+from dotenv import dotenv_values
 from ucimlrepo import fetch_ucirepo
 import beaapi
-from data.bea_request import BureauEconomicAnalysisRequest as BEARequest
-import pandas as pd
 
 class UcIrvineAPI:
 
@@ -24,20 +23,26 @@ class BureauEconomicAnalysisAPI:
         pass
 
     @staticmethod
-    def fetch_dataset(request: BEARequest) -> pd.DataFrame:
-        """Fetch BEA data and return it as a pandas DataFrame."""
-        if not request.user_id:
-            raise ValueError("BEA API key is required.")
+    def get_data_set_list():
+        beakey = dotenv_values()["beakey"]
+        return beaapi.get_data_set_list(beakey)
 
-        params = {
-            "TableName": request.table_name,
-            "GeoFips": request.geo_fips,
-            "Year": request.year,
-            "LineCode": request.line_code
-        }
+    @staticmethod
+    def get_parameter_list(dataset_name):
+        beakey = dotenv_values()["beakey"]
+        return beaapi.get_parameter_list(beakey, dataset_name)
 
-        return beaapi.get_data(
-            userid=request.user_id,
-            datasetname=request.dataset_name,
-            **params
-        )
+    @staticmethod
+    def get_parameter_values(dataset_name, parameter_name):
+        beakey = dotenv_values()["beakey"]
+        return beaapi.get_parameter_values(beakey, dataset_name, parameter_name)
+
+    @staticmethod
+    def get_parameter_metadata(dataset_name, target_parameter, **kwargs):
+        beakey = dotenv_values()["beakey"]
+        return beaapi.get_parameter_values_filtered(beakey, dataset_name, target_parameter, **kwargs)
+
+    @staticmethod
+    def fetch_data(dataset_name, **kwargs):
+        beakey = dotenv_values()["beakey"]
+        return beaapi.get_data(beakey, dataset_name, **kwargs)
