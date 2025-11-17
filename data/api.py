@@ -1,5 +1,8 @@
 from __future__ import annotations
 from ucimlrepo import fetch_ucirepo
+import beaapi
+from data.bea_request import BureauEconomicAnalysisRequest as BEARequest
+import pandas as pd
 
 class UcIrvineAPI:
 
@@ -14,3 +17,27 @@ class UcIrvineAPI:
         :return: object containing dataset metadata, dataframes, and variable info in its properties
         """
         return fetch_ucirepo(id=repo_id)
+
+class BureauEconomicAnalysisAPI:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def fetch_dataset(request: BEARequest) -> pd.DataFrame:
+        """Fetch BEA data and return it as a pandas DataFrame."""
+        if not request.user_id:
+            raise ValueError("BEA API key is required.")
+
+        params = {
+            "TableName": request.table_name,
+            "GeoFips": request.geo_fips,
+            "Year": request.year,
+            "LineCode": request.line_code
+        }
+
+        return beaapi.get_data(
+            userid=request.user_id,
+            datasetname=request.dataset_name,
+            **params
+        )
