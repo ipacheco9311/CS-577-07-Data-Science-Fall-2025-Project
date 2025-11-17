@@ -23,17 +23,12 @@ class BureauEconomicAnalysisAPI:
         pass
 
     @staticmethod
-    def fetch_dataset():
+    def fetch_dataset(dataset_name, **kwargs):
         """
             Loads a dataset from the Bureau of Economic Analysis API, including the dataframes and metadata information
+            :param dataset_name – Name of BEA dataset
+            :param kwargs – Other named parameters as key-value pairs
             :return: a dataframe containing real personal income of all U.S. states in 2019
          """
-        user_id = dotenv_values()["beakey"]
-        dataset_name = 'Regional'
-        kwargs = {
-            'GeoFips': 'STATE',
-            'LineCode': '1',
-            'TableName': 'SARPP',
-            'Year': '2019'
-        }
+        user_id = dotenv_values()['beakey']
         return beaapi.get_data(user_id, dataset_name, **kwargs)
