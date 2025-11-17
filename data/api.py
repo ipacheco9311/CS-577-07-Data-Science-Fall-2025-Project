@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dotenv import dotenv_values
 from ucimlrepo import fetch_ucirepo
+from enum import IntEnum
 import beaapi
+
 
 class UcIrvineAPI:
 
@@ -17,6 +19,13 @@ class UcIrvineAPI:
         """
         return fetch_ucirepo(id=repo_id)
 
+class UcIrvineDatasetIDs(IntEnum):
+    """
+    Enum for Dataset IDs in UCI's ML Repository .
+    """
+    Apartment_For_Rent_Classified = 555
+
+
 class BureauEconomicAnalysisAPI:
 
     def __init__(self):
@@ -30,5 +39,5 @@ class BureauEconomicAnalysisAPI:
             :param kwargs – Other named parameters as key-value pairs
             :return: a dataframe containing real personal income of all U.S. states in 2019
          """
-        user_id = dotenv_values()['beakey']
+        user_id = dotenv_values()['BEA_KEY']
         return beaapi.get_data(user_id, dataset_name, **kwargs)
