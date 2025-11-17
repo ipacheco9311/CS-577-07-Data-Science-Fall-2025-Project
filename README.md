@@ -5,7 +5,7 @@
 - [Project Proposal](#project-proposal)
 - [Directory Structure](#directory-structure)
 - [Common Commands](#common-commands)
-- [Bureau of Economic Analysis (BEA) API](#bureau-of-economic-analysis-bea-api)
+- [Bureau of Economic Analysis (BEA) API Key](#bureau-of-economic-analysis-bea-api-key)
 
 # Instructions
 __________
@@ -68,13 +68,15 @@ __________
       - Visualization
       - Fitting
       - Etc.
+- .env
+  - File that stores environment variables
 
 # Common Commands
 __________
 - `pip freeze > requirements.txt`
 - ` pip install -r requirements.txt`
 
-# Bureau of Economic Analysis (BEA) API
+# Bureau of Economic Analysis (BEA) API Key
 __________
 API calls are made to the BEA API via a wrapper class. To use it, you must first register for an API key from [here](https://apps.bea.gov/api/signup/) by providing your name and email address. The key will be emailed to you.
 
