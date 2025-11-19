@@ -7,6 +7,7 @@
 - [Directory Structure](#directory-structure)
 - [Common Commands](#common-commands)
 - [Bureau of Economic Analysis (BEA) API Key](#bureau-of-economic-analysis-bea-api-key)
+- [Progress Report](#progress-report)
 
 # Instructions
 
@@ -113,3 +114,7 @@ Once you have received your BEA API key.
 ```
 BEA_KEY=Your36DigitAPiKey
 ```
+
+# Progress Report
+__________
+View Progress Report [here](https://docs.google.com/document/d/1Brqvj0mPTDfRLu50i3gCvDf3HdrsVv1lbN4VC6Q-RSk/edit?usp=sharing)
