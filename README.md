@@ -8,6 +8,7 @@
 - [Common Commands](#common-commands)
 - [Bureau of Economic Analysis (BEA) API Key](#bureau-of-economic-analysis-bea-api-key)
 - [Progress Report](#progress-report)
+- [Presentation](#presentation)
 
 # Instructions
 
@@ -74,8 +75,14 @@ __________
 - source/
     - Folder where source code will live
     - project.ipynb
-        - Main source of data science
+        -  source of data science
             - Exploratory data analysis
+            - Visualization
+            - Fitting
+            - Etc.
+    - notebook.ipynb
+        -  source of data science
+          - Exploratory data analysis
             - Visualization
             - Fitting
             - Etc.
@@ -89,7 +96,7 @@ __________
 - `pip freeze > requirements.txt`
 - ` pip install -r requirements.txt`
 
-# Bureau of Economic Analysis (BEA) API Key
+# Bureau of Economic Analysis (BEA) API Key (NOT USED)
 
 __________
 API calls are made to the BEA API via a wrapper class.
@@ -118,3 +125,7 @@ BEA_KEY=Your36DigitAPiKey
 # Progress Report
 __________
 View Progress Report [here](https://docs.google.com/document/d/1Brqvj0mPTDfRLu50i3gCvDf3HdrsVv1lbN4VC6Q-RSk/edit?usp=sharing)
+
+# Presentation
+__________
+View Presentation [here](https://docs.google.com/document/d/1nVbIGIKaltG_b7rpuQCUDmRe3Tb_bK8Pk9V2LuTpAZM/edit?usp=sharing)
