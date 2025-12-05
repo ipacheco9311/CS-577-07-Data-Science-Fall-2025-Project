@@ -42,7 +42,6 @@ class BadDataException(ValueError, TypeError):
         self.value = value
         super().__init__(message)
 
-
 BAD_DATA = {
     "id": [],
     "category": [],
@@ -160,8 +159,7 @@ def clean_category(x):
 
         if any(p == '2' for p in cleaned_parts):
             raise BadDataException(cleaned_parts)
-
-        return cleaned_parts
+        return ','.join(cleaned_parts)
 
     except BadDataException as e:
         BAD_DATA["category"].append(e.value)
@@ -450,7 +448,6 @@ def clean_square_feet(x):
 
 def clean_address(x):
     try:
-        # TODO
         # --- Handle missing / NaN values ---
         if x is None:
             raise BadDataException(x)
@@ -606,6 +603,9 @@ def clean_time(x):
 
 
 def clean(uci_df) -> pandas.DataFrame:
+    for col in uci_df.columns:
+       BAD_DATA[col] = []
+
     cleaned_uci_df = pandas.DataFrame()
     cleaned_uci_df['id'] = uci_df['id'].apply(clean_id)
     cleaned_uci_df['category'] = uci_df['category'].apply(clean_category)
@@ -630,3 +630,32 @@ def clean(uci_df) -> pandas.DataFrame:
     cleaned_uci_df['source'] = uci_df['source'].apply(clean_source)
     cleaned_uci_df['time'] = uci_df['time'].apply(clean_time)
     return cleaned_uci_df
+
+def cast(clean_uci_df):
+    dtypes = {
+        'id': 'Int64',
+        'category': 'string',
+        'title': 'string',
+        'body': 'string',
+        'amenities': 'string',
+        'bathrooms': 'Int64',
+        'bedrooms': 'Int64',
+        'currency': 'string',
+        'fee': 'boolean',
+        'has_photo': 'boolean',
+        'pets_allowed': 'string',
+        'price': 'Float64',
+        'price_display': 'Float64',
+        'price_type': 'string',
+        'square_feet': 'Float64',
+        'address': 'string',
+        'cityname': 'string',
+        'state': 'string',
+        'latitude': 'Float64',
+        'longitude': 'Float64',
+        'source': 'string',
+        'time': 'Float64',
+    }
+    casted_df = clean_uci_df.astype(dtypes, copy=True)
+
+    return casted_df
