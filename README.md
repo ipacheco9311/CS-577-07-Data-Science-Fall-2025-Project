@@ -1,17 +1,14 @@
 # Semester Project
+__________
 
 - [Instructions](#instructions)
 - [Authors](#authors)
 - [Data Source](#data-source)
-- [Project Proposal](#project-proposal)
 - [Directory Structure](#directory-structure)
 - [Common Commands](#common-commands)
-- [Bureau of Economic Analysis (BEA) API Key](#bureau-of-economic-analysis-bea-api-key)
-- [Progress Report](#progress-report)
-- [Presentation](#presentation)
+- [Presentations](#presentations)
 
 # Instructions
-
 __________
 
 You will complete a semester project.
@@ -31,45 +28,33 @@ Groups may not be larger than 3.
 All students must submit their own copy of the proposal on Canvas, including the names of your project partners.
 If your group has 3 people in it, all 3 of you must submit a copy of the same proposal on Canvas.
 
-https://sdsu.instructure.com/courses/187179/files/18135112?wrap=1
+[View Official Requirements](https://sdsu.instructure.com/courses/187179/files/18135112?wrap=1)
 
 # Authors
-
 __________
-Isaia Pacheco
 
-- Email
-    - ipacheco9311@sdsu.edu
-- Red ID
-    - 819438016
+1. Isaia Pacheco
+   - [Email](mailto:ipacheco9311@sdsu.edu)
+   - Red ID
+       - 819438016
 
-Isaac Pacheco
-
-- Email
-    - ipacheco3354@sdsu.edu
-- Red ID
-    - 120448533
+2. Isaac Pacheco
+   - [Email](mailto:ipacheco3354@sdsu.edu)
+   - Red ID
+       - 120448533
 
 # Data Source
-
 __________
+
 "Apartment for Rent Classified." UCI Machine Learning Repository, 2019, https://doi.org/10.24432/C5X623.
 
-"SARPP Real Personal Income, Real PCE, and Regional Price Parities by State." Bureau of Economic Analysis, 2019,
-https://apps.bea.gov/iTable/?reqid=70&step=1&isuri=1&acrdn=4&_gl=1*5smdkb*_ga*ODc4NzEzMTExLjE3NjMzMzY3Nzg.*_ga_J4698JNNFT*czE3NjMzMzY3NzckbzEkZzEkdDE3NjMzMzczNzkkajU5JGwwJGgw#eyJhcHBpZCI6NzAsInN0ZXBzIjpbMSwyOSwyNSwzMSwyNiwyNywzMF0sImRhdGEiOltbIlRhYmxlSWQiLCIxMTAiXSxbIk1ham9yX0FyZWEiLCIwIl0sWyJTdGF0ZSIsWyIwIl1dLFsiQXJlYSIsWyJYWCJdXSxbIlN0YXRpc3RpYyIsWyItMSJdXSxbIlVuaXRfb2ZfbWVhc3VyZSIsIkxldmVscyJdLFsiWWVhciIsWyIyMDE5Il1dLFsiWWVhckJlZ2luIiwiLTEiXSxbIlllYXJfRW5kIiwiLTEiXV19
-
-# Project Proposal
-
-__________
-
-- https://docs.google.com/document/d/12TCXoH94xUPD0hpUMPlKg9uXZ1I1V-cDOle3JsIMFkk/edit?usp=sharing
-
 # Directory Structure
-
 __________
 
 - data/
     - Folder where data will live
+    - apartments.duckdb (auto generated)
+      - SQL DB containing clean data
 - requirements.txt
     - File that maintains the dependencies
 - source/
@@ -80,52 +65,22 @@ __________
             - Visualization
             - Fitting
             - Etc.
-    - notebook.ipynb
-        -  source of data science
-          - Exploratory data analysis
-            - Visualization
-            - Fitting
-            - Etc.
-- .env
-    - File that stores environment variables
+  - api.py
+    - UC Irvine API wrapper for unclean data
+  - wrangling_utils.py
+    - Data wrangling utility functions
 
 # Common Commands
-
 __________
 
 - `pip freeze > requirements.txt`
-- ` pip install -r requirements.txt`
+- `pip install -r requirements.txt`
 
-# Bureau of Economic Analysis (BEA) API Key (NOT USED)
-
+# Presentations
 __________
-API calls are made to the BEA API via a wrapper class.
-To use it, you must first register for an API key from [here](https://apps.bea.gov/api/signup/) by providing your name
-and email address.
-The key will be emailed to you.
 
-Once you have received your BEA API key.
+[View Progress Proposal](https://docs.google.com/document/d/12TCXoH94xUPD0hpUMPlKg9uXZ1I1V-cDOle3JsIMFkk/edit?usp=sharing)
 
-1. Create an unversioned text file in the repository root called `.env`
+[View Progress Report](https://docs.google.com/document/d/1Brqvj0mPTDfRLu50i3gCvDf3HdrsVv1lbN4VC6Q-RSk/edit?usp=sharing)
 
-```
-├── .env
-├── README.md
-├── requirements.txt
-├── data/
-└── source/
-```
-
-2. In the `.env` file, Create an environment variable `BEA_KEY` with your personal key i.e.
-
-```
-BEA_KEY=Your36DigitAPiKey
-```
-
-# Progress Report
-__________
-View Progress Report [here](https://docs.google.com/document/d/1Brqvj0mPTDfRLu50i3gCvDf3HdrsVv1lbN4VC6Q-RSk/edit?usp=sharing)
-
-# Presentation
-__________
-View Presentation [here](https://docs.google.com/document/d/1nVbIGIKaltG_b7rpuQCUDmRe3Tb_bK8Pk9V2LuTpAZM/edit?usp=sharing)
+[View Presentation](https://docs.google.com/document/d/1nVbIGIKaltG_b7rpuQCUDmRe3Tb_bK8Pk9V2LuTpAZM/edit?usp=sharing)
