@@ -53,7 +53,7 @@ __________
 
 - data/
     - Folder where data will live
-    - apartments.duckdb (auto generated)
+    - apartments.duckdb
       - SQL DB containing clean data
 - presentations/
   - folder where reports and presentations live
