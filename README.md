@@ -55,6 +55,11 @@ __________
     - Folder where data will live
     - apartments.duckdb (auto generated)
       - SQL DB containing clean data
+- presentations/
+  - folder where reports and presentations live
+    - Final Project Report.pdf
+    - Project Presentation.pdf
+    - Progress Report.pdt
 - requirements.txt
     - File that maintains the dependencies
 - source/
@@ -84,3 +89,5 @@ __________
 [View Progress Report](https://docs.google.com/document/d/1Brqvj0mPTDfRLu50i3gCvDf3HdrsVv1lbN4VC6Q-RSk/edit?usp=sharing)
 
 [View Presentation](https://docs.google.com/document/d/1nVbIGIKaltG_b7rpuQCUDmRe3Tb_bK8Pk9V2LuTpAZM/edit?usp=sharing)
+
+[View Final Project Report](https://docs.google.com/document/d/1nKzxYgQaGdqvic1tVkl8p1CvJ4yCLP90tiQBVBtJG5Q/edit?usp=sharing)
